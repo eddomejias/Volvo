@@ -1,0 +1,397 @@
+@import url('https://fonts.googleapis.com/css?family=Roboto:300,400,400i,700&display=swap');
+
+@import url(components/buttons.css);
+
+
+@import url(../assets/icons/icons.css);
+
+:root{
+    --main-light-color: white; 
+    --secondary-light-color: rgb(135, 166, 180) ;
+    --main-dark-color: rgb(27, 27, 27);
+    --main-background-light-color: white; 
+    --secondary-background-light-color:rgb(229, 238, 231);
+
+    --font-family-main: "Roboto", san-serif; 
+
+    --animation-main-time: 800ms; 
+}
+
+*{
+    box-sizing: border-box;
+    font-family: var(--font-family-main);
+}
+
+body{
+    padding: 0;
+    margin: 0;
+    background-color: var(--secondary-background-light-color);
+}
+
+.container{
+    max-width: 1024px;
+    margin: auto;
+}
+
+/* hero section __________________ */
+
+.hero{
+    /* box-sizing: border-box; */
+    max-width: 100vw;
+    height: 100vh;
+    background-color: var(--secondary-background-light-color);
+    overflow: hidden;
+}
+
+.hero__background{
+    background-image: url(../assets/images/hero-img.jpg);
+    background-size: 100%;
+    background-position: bottom;
+    background-clip: border-box;
+    background-repeat: no-repeat;
+    background-color: black;
+    width: 100vw;
+    height: calc(100vh - 120px);
+    transition: var(--animation-main-time);
+}
+
+.hero__background:hover{
+    background-size: 130%;
+    background-position: bottom left;
+}
+
+.hero__header{
+    box-sizing: border-box;
+    padding: 30px 0;
+    width: 100%;
+    height: 50%;
+
+    /* just for debbuging */
+    /* background-color: black; */
+
+    color: var(--main-light-color);
+    font-size: 15px;
+    font-family: var(--font-family-main);
+    transition: var(--animation-main-time);
+    background-image: linear-gradient(180deg, rgba(0,0,0, 0.6) 0%, rgba(0,0,0,0) 100%);
+}
+
+.main-title{
+    font-size: 8em;
+    font-weight: normal;
+    letter-spacing: 6px;
+    margin: 0 auto;
+    width: fit-content;
+}
+
+.slogan{
+    font-size: 1.2em;
+    width: fit-content;
+    margin: 0 auto;
+    letter-spacing: 2px;
+    font-weight: 300;
+}
+
+
+/*          ----hero nav section  */
+
+.tile{
+    width: 300px;
+    height: 150px;
+    background-color: var(--main-background-light-color);
+    border-radius: 5px;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+    font-family: var(--font-family-main);
+    font-size: 1em;
+    letter-spacing: 1px;
+    color: var(--main-dark-color);
+    margin: -80px 10px 0;
+    box-shadow: 0 4px 10px rgba(0, 0, 0, 0.1);
+    transition: calc( var(--animation-main-time) / 3);
+    cursor: pointer;
+}
+
+.tile:hover{
+    background-color: var(--main-dark-color);
+    color: var(--main-light-color);
+}
+
+
+
+.cta{
+    background-color: var(--secondary-light-color);
+    color: var(--main-light-color) ; 
+}
+
+.tile--icon{
+    font-size: 2em;
+}
+
+.tiles__list{
+    display: flex;
+    justify-content: center;
+    padding: 0;
+}
+
+
+
+
+/* Overview section __________________________ */
+
+.overview__brief-container{
+    background-color: var(--main-light-color);
+    width: 100%;
+    padding: 6em 0;
+    margin: 0;
+}
+
+.overview__brief__details{
+    width: 100%;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: flex-end;
+    background-image: url(../assets/images/white-car-side-view.jpg.png);
+    background-size: 75%;
+    background-repeat: no-repeat;
+    background-position-x: left;
+    background-position-y: center;
+    color: var(--main-dark-color);
+    font-size: 10px;
+
+}
+
+.brief--title{
+    width: 40%;
+    text-align: right;
+    font-size: 3em;
+}
+
+.brief--content{
+    width: 30%;
+    text-align: right;
+    font-size: 1.5em;
+}
+
+.overview__container{
+    width: 100%;
+    padding: 3em 0;
+    margin: 0;
+    background-color: var(--secondary-background-light-color);
+    font-size: 10px;
+}
+
+.overview__container.background{
+    background-image: url(../assets/images/car-driving.png);
+    background-clip: border-box;
+    background-position-y: bottom;
+    background-size: 100%;
+}
+
+.overview__details{
+    margin: auto 0;
+    width: 50%; 
+    color: var(--main-dark-color);
+}
+
+.overview--title{
+    font-size: 3em;
+    margin: 0;
+}
+
+.overview--subtitle{
+    font-size: 1.6em;
+    margin: 0.5em 0
+}
+
+.overview--content{
+    text-align: left;
+    font-size: 1.5em;
+    margin-bottom: 1.5em;
+}
+
+.overview--img{
+    width: 50%;
+    margin: 0;
+    padding: 0;
+    margin-left: 3em;
+}
+
+.overview--img img{
+    width: 100%;
+    margin: 0;
+    padding: 0;
+}
+
+.flex{
+    display: flex;
+    justify-content: space-between;
+}
+
+/* Features section __________________________ */
+
+.features-banner{
+    max-width: 1480px;
+    margin: 0 auto;
+    width: 100%;
+    height: 450px;
+    display: flex;
+}
+
+.feature__tile{
+    flex: 1;
+    max-height: 100%;
+    object-fit: contain;
+    overflow: hidden;
+    position: relative;
+    transition: var(--animation-main-time);
+}
+
+.feature__tile:hover.details {
+    flex: 2;
+}
+
+.feature__tile__details{
+    font-size: 10px;
+    position: absolute;
+    background-color: rgba(135, 166, 180, 0.8);
+    width: auto;
+    height: auto;
+    top: 0;
+    bottom: 0;
+    right: 0;
+    left: 0;
+    color: var(--main-light-color);
+    padding: 6em 2em;
+}
+
+.tile__details--container{
+    max-width: 250px;
+    margin: 0 auto;
+}
+
+.feature__tile[class*="bg"]{
+    background-position: center;
+    background-size: cover;
+    background-repeat: no-repeat;
+}
+
+.feature__tile.bg-1{
+    background-image: url(../assets/images/control-inside-panel.jpg);
+}
+
+.feature__tile.bg-2{
+    background-image: url(../assets/images/sound-system.jpg);
+}
+
+.feature__tile.bg-3{
+    background-image: url(../assets/images/inside-chairs.jpg);
+}
+
+.feature__tile.bg-4{
+    background-image: url(../assets/images/outside-view.jpg);
+}
+
+.feature__tile__details .title{
+    font-size: 3em;
+}
+
+.feature__tile__details .details{
+    font-size: 1.5em;
+    margin-bottom: 2em;
+}
+
+
+/* Caracteristics section __________________________ */
+
+.caracteritics{
+    background-color: var(--main-background-light-color);
+    width: 100%;
+    height: auto;
+    padding: 50px 0;
+}
+
+.caracteristics__container{
+    display: grid;
+    grid-template: repeat(3, 1fr) / repeat(3, 1fr);
+    gap: 30px 20px;
+    justify-content: center;
+    align-content: center;
+    justify-items: left;
+    align-items: center;
+    color: var(--main-dark-color);
+}
+
+.carateristics__details-container .icon{
+    font-size: 40px;
+}
+
+.right{
+    justify-self: flex-end;
+    text-align: right;
+}
+
+.car-image{
+    grid-column: 2 / span 1;
+    grid-row: 1 / span 3;
+}
+
+.car-image img{
+    height: 100%;
+}
+
+.clr-white{
+    color: var(--main-light-color);
+}
+
+.paddin-vertical{
+    padding: 40px 0;
+}
+
+
+/* Footer section __________________________ */
+.footer{
+    background-color: var(--main-dark-color);
+    margin: 0;
+    width: 100%;
+    font-size: 10px;
+}
+
+.footer__container{
+    display: grid;
+    grid-template-rows: auto repeat(2, 1fr);
+    grid-template-columns: repeat(5, 1fr);
+    color: var(--main-light-color);
+    padding: 40px 0;
+    column-gap: 35px;
+}
+
+.footer--title{
+    font-size: 3em;
+    grid-column: 1 / -1;
+}
+
+.address__container [class*="--title"],
+.phone__container [class*="--title"]{
+    font-size: 2em;
+}
+
+.address__container [class*="--details"],
+.phone__container [class*="--details"]{
+    font-size: 1.5em;
+}
+
+.volvo-logo {
+    width: 100%;
+    margin: 0 auto;
+    text-align: center;
+}
+
+.volvo-logo img{
+    width: 20%;
+    margin-bottom: 40px;
+    cursor: pointer;
+}

@@ -1,0 +1,52 @@
+/* Fonts  */
+@import url('https://fonts.googleapis.com/css?family=Roboto:300,400,400i,700&display=swap');
+
+:root{
+    --main-dark-color: rgb(26, 26, 26);
+    --main-light-color: white; 
+}
+
+.button{
+    background-color: transparent;
+    border: 1.5px solid var(--main-dark-color);
+    border-radius: 50px;
+    color: var(--main-dark-color);
+    width: fit-content;
+    font-family: "Roboto", sans-serif;
+    padding: 12px 24px;
+    transition: 400ms;
+    cursor: pointer;
+}
+
+.button--light{
+    background-color: transparent;
+    border: 1.5px solid var(--main-light-color);
+    border-radius: 50px;
+    color: var(--main-light-color);
+    width: fit-content;
+    font-family: "Roboto", sans-serif;
+    padding: 12px 24px;
+    transition: 400ms;
+    cursor: pointer;
+}
+
+.button__details{
+    color: inherit;
+    min-width: 120px;
+    font-size: 14px;
+    margin: 0;
+    text-transform: lowercase;
+    font-weight: normal;
+    letter-spacing: 2px;
+    text-align: center;
+}
+
+.button:hover{
+    background-color: var(--main-dark-color);
+    color: var(--main-light-color);
+}
+
+.button--light:hover{
+    background-color: var(--main-light-color);
+    color: var(--main-dark-color);
+}
